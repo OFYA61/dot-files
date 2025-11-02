@@ -9,6 +9,8 @@ bindkey -v
 
 plugins=(
   git
+  fzf
+  extract
   rust
   vi-mode
 )
@@ -29,6 +31,8 @@ if [ -d "$scripts_dir" ]; then
 else
   echo "Could not find scripts directory '$scripts_dir'"
 fi
+
+COMPLETION_WAITING_DOTS="true"
 
 alias fans_silent="echo silent | sudo tee /sys/devices/platform/msi-ec/fan_mode"
 alias fans_auto="echo auto | sudo tee /sys/devices/platform/msi-ec/fan_mode"
