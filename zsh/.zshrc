@@ -15,10 +15,10 @@ plugins=(
   vi-mode
 )
 
-# Add bob nvim manager to PATH
-export PATH="/opt/nvim/:$PATH"
-
 alias armgcc="arm-linux-gnueabihf-gcc -static"
+
+export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/init-nvm.sh
 
 scripts_dir="$HOME/src/repos/dot-files/scripts"
 
