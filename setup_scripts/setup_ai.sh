@@ -49,19 +49,12 @@ echo "Creating Open WebUI Systemd Service..."
 cat <<EOF | sudo tee /etc/systemd/system/docker-open-webui.service
 [Unit]
 Description=Open WebUI Docker Container
-Requires=docker.service ollama.service
-After=docker.service ollama.service
+Requires=docker.service
+After=docker.service
 
 [Service]
 Restart=always
-ExecStartPre=-/usr/bin/docker stop open-webui
-ExecStartPre=-/usr/bin/docker rm open-webui
-ExecStart=/usr/bin/docker run --name open-webui \
-  -e OLLAMA_BASE_URL=http://172.17.0.1:11434 \
-  --gpus all \
-  -v open-webui:/app/backend/data \
-  -p 3000:8080 \
-  ghcr.io/open-webui/open-webui:main
+ExecStart=/usr/bin/docker start -a open-webui
 ExecStop=/usr/bin/docker stop -t 2 open-webui
 
 [Install]
