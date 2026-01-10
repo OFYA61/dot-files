@@ -1,3 +1,4 @@
+-- Integrate with tmux by using the same navigation keys
 return {
 	"christoomey/vim-tmux-navigator",
 	cmd = {

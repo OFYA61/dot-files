@@ -71,3 +71,11 @@ echo "1. IMPORTANT: Log out and log back in for group changes."
 echo "2. Open WebUI: http://localhost:3000"
 echo "3. Ollama is running as a system service."
 echo "-------------------------------------------------------"
+
+docker run -d -p 3000:8080 \
+  --gpus all \
+  -e OLLAMA_BASE_URL=http://172.17.0.1:11434 \
+  -v open-webui:/app/backend/data \
+  --name open-webui \
+  --restart always \
+  ghcr.io/open-webui/open-webui:main

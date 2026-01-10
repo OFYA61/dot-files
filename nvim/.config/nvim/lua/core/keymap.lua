@@ -37,10 +37,10 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- Window resize
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-Up>", ":resize +2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<M-Down>", ":resize -2<CR>", { noremap = true, silent = true })
 
 -- Useless mappings
 vim.keymap.set("n", "[[", "<NOP>")
