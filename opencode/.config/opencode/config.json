@@ -15,6 +15,15 @@
         },
         "qwen3:8b-32k-java-spring-boot": {
           "tools": true
+        },
+        "deepseek-coder-v2:16b-rust": {
+          "tools": true
+        },
+        "deepseek-coder-v2:16b-react": {
+          "tools": true
+        },
+        "deepseek-coder-v2:16b-java-spring-boot": {
+          "tools": true
         }
       }
     }
