@@ -7,7 +7,13 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "qwen3:8b-16k": {
+        "qwen3:8b-32k-rust": {
+          "tools": true
+        },
+        "qwen3:8b-32k-react": {
+          "tools": true
+        },
+        "qwen3:8b-32k-java-spring-boot": {
           "tools": true
         }
       }
