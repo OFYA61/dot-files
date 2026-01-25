@@ -37,3 +37,6 @@ COMPLETION_WAITING_DOTS="true"
 alias fans_silent="echo silent | sudo tee /sys/devices/platform/msi-ec/fan_mode"
 alias fans_auto="echo auto | sudo tee /sys/devices/platform/msi-ec/fan_mode"
 alias fans_advanced="echo advanced | sudo tee /sys/devices/platform/msi-ec/fan_mode"
+
+export PKG_CONFIG_PATH="$HOME/.local/lib/pkgconfig:/usr/local/lib/pkgconfig/:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"

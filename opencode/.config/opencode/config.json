@@ -7,22 +7,7 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "qwen3:8b-32k-rust": {
-          "tools": true
-        },
-        "qwen3:8b-32k-react": {
-          "tools": true
-        },
-        "qwen3:8b-32k-java-spring-boot": {
-          "tools": true
-        },
-        "deepseek-coder-v2:16b-rust": {
-          "tools": true
-        },
-        "deepseek-coder-v2:16b-react": {
-          "tools": true
-        },
-        "deepseek-coder-v2:16b-java-spring-boot": {
+        "qwen2.5-coder:zig": {
           "tools": true
         }
       }

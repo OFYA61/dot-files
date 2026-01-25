@@ -4,6 +4,16 @@ local servers = {
 	rust_analyzer = {
 		settings = {
 			["rust-analyzer"] = {
+				cargo = {
+					extraEnv = {
+						PKG_CONFIG_PATH = vim.fn.expand("~/.local/lib/pkgconfig:/usr/local/lib/pkgconfig")
+							.. ":"
+							.. (os.getenv("PKG_CONFIG_PATH") or ""),
+						LD_LIBRARY_PATH = vim.fn.expand("~/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH")
+							.. ":"
+							.. (os.getenv("LD_LIBRARY_PATH") or ""),
+					},
+				},
 				imports = {
 					granularity = {
 						group = "item",
@@ -27,6 +37,9 @@ local servers = {
 				},
 			},
 		},
+	},
+	zls = {
+		enable_build_on_save = true,
 	},
 }
 
