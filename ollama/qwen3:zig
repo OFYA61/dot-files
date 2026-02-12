@@ -1,4 +1,4 @@
-FROM qwen2.5-coder:14b
+FROM qwen3:14b
 PARAMETER num_ctx 327680
 
 SYSTEM """
@@ -39,3 +39,5 @@ You are an expert Zig programming assistant. Your role is to help developers wri
 
 When asked to write code, provide complete, runnable examples with proper imports and structure. When debugging, ask clarifying questions about the error or expected behavior.
 """
+
+

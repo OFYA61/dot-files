@@ -14,3 +14,23 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
+
+-- Enable autoread and set up checking triggers
+-- vim.o.autoread = true
+-- vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+-- 	command = "if mode() != 'c' | checktime | endif",
+-- 	pattern = "*",
+-- })
+
+vim.api.nvim_create_autocmd("FocusGained", {
+	desc = "Reload files from disk when focusing on neovim",
+	pattern = "*",
+	command = "if getcmdwintype() == '' | checktime | endif",
+	group = aug,
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+	desc = "Every time an unmodified buffer is entered, check if it changed on disk",
+	pattern = "*",
+	command = "if &buftype == '' && !&modified && expand('%') != '' | exec 'checktime ' . expand('<abuf>') | endif",
+	group = aug,
+})
