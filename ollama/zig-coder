@@ -1,12 +1,9 @@
-# Use the Qwen 3.5 9B model as the base
-FROM qwen3.5:9b
+FROM qwen2.5-coder:32b-instruct-q4_K_M
 
-# Set model parameters for better coding logic
-PARAMETER temperature 0.2
-PARAMETER top_p 0.9
-PARAMETER num_ctx 16384
+PARAMETER temperature 0.3
+PARAMETER top_p 0.95
+PARAMETER num_ctx 12288
 
-# The specialized System Prompt for Zig
 SYSTEM """
 You are an expert Zig software engineer. Your goal is to provide high-quality, idiomatic Zig code (targeting the latest stable release). 
 
