@@ -10,7 +10,7 @@ mkdir -p ~/.searxng/config ~/.searxng/data
 echo "Starting up docker container"
 docker run --name searxng -d -p 8888:8080 -v "${HOME}/.searxng/config/:/etc/searxng/" -v "${HOME}/.searxng/data/:/var/cache/searxng/" docker.io/searxng/searxng:latest
 
-# --- 7. Create Open WebUI Systemd Service ---
+# --- 2. Create Open WebUI Systemd Service ---
 echo "Creating Open WebUI Systemd Service..."
 cat <<EOF | sudo tee /etc/systemd/system/docker-searxng.service
 [Unit]
