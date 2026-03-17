@@ -38,9 +38,8 @@ fi
 echo "Pulling base model qwen3.5:9b..."
 ollama pull qwen3.5:9b
 
-echo "Creating 'zig-coder' submodel..."
-# This command builds the model named 'zig-coder' using the 'Zigfile'
-ollama create zig-coder -f ./zig-coder
+echo "Creating 'zig-coder' submodels..."
+ollama create zig-coder-qwen3.5-coder -f ./zig-coder-qwen3.5-coder
 
 echo "------------------------------------------------"
 echo "Setup complete! You can now run your model with:"

@@ -8,8 +8,8 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "zig-coder": {
-          "name": "Zig Coder",
+        "zig-coder-qwen3.5-coder": {
+          "name": "Zig Coder (Qwen3.5 Coder 9B)",
           "tool_call": true
         }
       }

@@ -1,4 +1,4 @@
-FROM qwen2.5-coder:32b-instruct-q4_K_M
+FROM qwen3.5:9b
 
 PARAMETER temperature 0.3
 PARAMETER top_p 0.95
