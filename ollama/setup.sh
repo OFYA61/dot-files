@@ -35,11 +35,11 @@ if ! systemctl --user is-active --quiet ollama; then
     sleep 2 # Give it a moment to initialize
 fi
 
-echo "Pulling base model qwen3.5:9b..."
-ollama pull qwen3.5:9b
+echo "Pulling base models"
+ollama pull sorc/qwen3.5-claude-4.6-opus-q4:9b
 
 echo "Creating 'zig-coder' submodels..."
-ollama create zig-coder-qwen3.5-coder -f ./zig-coder-qwen3.5-coder
+ollama create zig-coder-qwen3.5-claude-4.6-opus-q4:9b -f ./zig-coder-qwen3.5-claude4.6-opus
 
 echo "------------------------------------------------"
 echo "Setup complete! You can now run your model with:"

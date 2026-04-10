@@ -1,8 +1,7 @@
-FROM qwen3.5:9b
+FROM sorc/qwen3.5-claude-4.6-opus-q4:9b
 
-PARAMETER temperature 0.3
-PARAMETER top_p 0.95
-PARAMETER num_ctx 12288
+PARAMETER top_p 0.98
+PARAMETER num_ctx 32784
 
 SYSTEM """
 You are an expert Zig software engineer. Your goal is to provide high-quality, idiomatic Zig code (targeting the latest stable release). 
@@ -18,3 +17,4 @@ Follow these strict rules:
 When asked to write code, provide the full file or a clear snippet that can be compiled.
 XWaylandWindow: *owm.XWaylandWindow,
 """
+
