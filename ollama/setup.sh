@@ -10,6 +10,7 @@ Description=Ollama Service
 After=network.target
 
 [Service]
+Environment="OLLAMA_CONTEXT_LENGTH=64000"
 ExecStart=$(which ollama) serve
 Restart=always
 RestartSec=3

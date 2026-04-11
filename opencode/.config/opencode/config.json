@@ -9,7 +9,11 @@
       },
       "models": {
         "zig-coder-qwen3.5-claude-4.6-opus-q4:9b": {
-          "name": "Zig Coder (Qwen3.5 Claude4.6 Q4 9B)",
+          "name": "Qwen3.5 Claude4.6 Q4 9B (Zig)",
+          "tool_call": true
+        },
+        "sorc/qwen3.5-claude-4.6-opus-q4:9b": {
+          "name": "Qwen3.5 Claude4.6 Q4 9B (Raw)",
           "tool_call": true
         }
       }
