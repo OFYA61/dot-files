@@ -1,22 +1,35 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "ollama-local": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama Local",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      },
-      "models": {
-        "zig-coder-qwen3.5-claude-4.6-opus-q4:9b": {
-          "name": "Qwen3.5 Claude4.6 Q4 9B (Zig)",
-          "tool_call": true
-        },
-        "sorc/qwen3.5-claude-4.6-opus-q4:9b": {
-          "name": "Qwen3.5 Claude4.6 Q4 9B (Raw)",
-          "tool_call": true
-        }
-      }
-    }
-  }
+	"$schema": "https://opencode.ai/config.json",
+	"mcp": {
+		"zig-docs": {
+			"type": "local",
+			"command": [
+				"npx",
+				"-y",
+				"zig-mcp@latest",
+				"--doc-source",
+				"local"
+			],
+			"enabled": true
+		}
+	},
+	"provider": {
+		"ollama-local": {
+			"npm": "@ai-sdk/openai-compatible",
+			"name": "Ollama Local",
+			"options": {
+				"baseURL": "http://localhost:11434/v1"
+			},
+			"models": {
+				"zig-coder-qwen3.5-claude-4.6-opus-q4:9b": {
+					"name": "Qwen3.5 Claude4.6 Q4 9B (Zig)",
+					"tool_call": true
+				},
+				"sorc/qwen3.5-claude-4.6-opus-q4:9b": {
+					"name": "Qwen3.5 Claude4.6 Q4 9B (Raw)",
+					"tool_call": true
+				}
+			}
+		}
+	}
 }

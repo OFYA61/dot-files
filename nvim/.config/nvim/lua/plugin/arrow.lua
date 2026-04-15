@@ -6,7 +6,7 @@ vim.pack.add({
 require("arrow").setup({
 	show_icons = true,
 	leader_key = "<leader>;",
-	buffer_leader_key = "m",
+	buffer_leader_key = "<leader>m",
 })
 
 local keys = { "a", "s", "d", "f", "g", "h", "j", "k", "l", ";" }
