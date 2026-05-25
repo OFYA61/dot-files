@@ -64,6 +64,11 @@ local servers = {
 	},
 	zls = {
 		enable_build_on_save = true,
+		settings = {
+			zls = {
+				zig_exe_path = "/home/hamza/src/software/zig-x86_64-linux-0.16.0/zig",
+			},
+		},
 	},
 }
 

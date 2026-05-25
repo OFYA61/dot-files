@@ -1,0 +1,133 @@
+/* Reset & Base Settings */
+* {
+    font-family: "Ubuntu Nerd Font", "FiraCode Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+/* The Bar Container (COSMIC Dark Mode Background) */
+window#waybar {
+    background-color: rgba(26, 27, 34, 0.5); 
+    color: #f4f4f6;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+/* Workspaces Module (ext-workspace styling) */
+#workspaces {
+    background-color: rgba(38, 41, 51, 0.75);
+    margin: 4px;
+    margin-left: 8px;
+    border-radius: 6px;
+    border: 1px solid #313645;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    color: #a9b1d6;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #f4f4f6;
+    background-color: #313645;
+}
+
+/* The Active/Focused Workspace (COSMIC Cyan Focus) */
+#workspaces button.active {
+    color: #1a1b22;
+    background-color: #00d2c4; 
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+#workspaces button.urgent {
+    color: #f4f4f6;
+    background-color: #f05151;
+    border-radius: 4px;
+}
+
+/* Right-Side Modules Base Styling */
+#pulseaudio,
+#memory,
+#battery,
+#network,
+#time {
+    background-color: rgba(38, 41, 51, 0.75);
+    color: #f4f4f6;
+    padding: 0 12px;
+    margin: 4px 0;
+    border-top: 1px solid #313645;
+    border-bottom: 1px solid #313645;
+}
+
+/* Left-most module on the right section (Wifi) */
+#network {
+    border-left: 1px solid #313645;
+    border-radius: 6px 0 0 6px;
+}
+
+/* Right-most module on the right section (Time container group) */
+#time {
+    border-right: 1px solid #313645;
+    border-radius: 0 6px 6px 0;
+    margin-right: 8px;
+}
+
+/* Soft separators between mid-right blocks */
+#network, #battery, #memory, #pulseaudio {
+    border-right: 1px solid #313645;
+}
+
+/* Subtle Hover Effect for the Blocks */
+#time:hover,
+#pulseaudio:hover,
+#memory:hover,
+#battery:hover,
+#network:hover {
+    background-color: #313645;
+}
+
+/* Strip inner styles from the clocks inside the group */
+#time #clock,
+#time #clock.calendar {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add a clean spacing gap between the calendar and time text */
+#time #clock {
+    padding-left: 10px; 
+}
+
+/* Module Specific Color Accents */
+#battery.charging, #battery.plugged {
+    color: #26a269;
+}
+
+#battery.warning.discharging {
+    color: #e67e22;
+}
+
+#battery.critical.discharging {
+    color: #e74c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Critical Warning Animation */
+@keyframes blink {
+    to {
+        background-color: #e74c3c;
+        color: #f4f4f6;
+    }
+}

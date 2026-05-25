@@ -28,6 +28,10 @@
 				"sorc/qwen3.5-claude-4.6-opus-q4:9b": {
 					"name": "Qwen3.5 Claude4.6 Q4 9B (Raw)",
 					"tool_call": true
+				},
+				"zig-coder-gemma4:e2b": {
+					"name": "Gemma4 e2b (Zig)",
+					"tool_call": true
 				}
 			}
 		}

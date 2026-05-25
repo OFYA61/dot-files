@@ -40,3 +40,6 @@ alias fans_advanced="echo advanced | sudo tee /sys/devices/platform/msi-ec/fan_m
 
 export PKG_CONFIG_PATH="$HOME/.local/lib/pkgconfig:/usr/local/lib/pkgconfig/:$PKG_CONFIG_PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"
+
+export PATH="~/src/software/zig-x86_64-linux-0.16.0/:$PATH"
+alias zig="~/src/software/zig-x86_64-linux-0.16.0/zig"

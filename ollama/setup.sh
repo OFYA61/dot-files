@@ -38,9 +38,12 @@ fi
 
 echo "Pulling base models"
 ollama pull sorc/qwen3.5-claude-4.6-opus-q4:9b
+ollama pull gemma4:e2b
+ollama pull gemma4:e4b
 
 echo "Creating 'zig-coder' submodels..."
 ollama create zig-coder-qwen3.5-claude-4.6-opus-q4:9b -f ./zig-coder-qwen3.5-claude4.6-opus
+ollama create zig-coder-gemma4:e2b -f./zig-coder-gemma4
 
 echo "------------------------------------------------"
 echo "Setup complete! You can now run your model with:"
