@@ -113,9 +113,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("K", vim.lsp.buf.hover, "Hover Documentation")
 		map("<C-k>", vim.lsp.buf.signature_help, "Signature Documentation")
 
-		vim.diagnostic.goto_next({})
-		map(",e", vim.diagnostic.goto_prev, "Previous diagnostic")
-		map(".e", vim.diagnostic.goto_next, "Next diagnostic")
+		map(",e", function()
+			vim.diagnostic.jump({ count = -1, float = true })
+		end, "Previous diagnostic")
+		map(".e", function()
+			vim.diagnostic.jump({ count = 1, float = true })
+		end, "Next diagnostic")
 		map("<leader>od", vim.diagnostic.open_float, "[O]pen [D]iagnostic")
 
 		map("gd", telescope_builtin.lsp_definitions, "[G]oto [D]efinition")

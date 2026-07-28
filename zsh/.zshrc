@@ -43,3 +43,5 @@ export LD_LIBRARY_PATH="$HOME/.local/lib:/usr/local/lib:$LD_LIBRARY_PATH"
 
 export PATH="~/src/software/zig-x86_64-linux-0.16.0/:$PATH"
 alias zig="~/src/software/zig-x86_64-linux-0.16.0/zig"
+
+alias llmfit="uv tool run llmfit"

@@ -7,6 +7,7 @@ set -e
 # Note: Excluding 'ollama', 'scripts', and 'setup_scripts' as requested
 CONFIG_PACKAGES=(
     "alacritty"
+    "herdr"
     "nvim"
     "opencode"
     "tmux"
