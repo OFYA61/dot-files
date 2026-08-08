@@ -19,9 +19,9 @@ vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
 
 -- Store stuff in the system buffer instead of the editor buffer
-vim.keymap.set("n", "<leader>y", '"+y')
-vim.keymap.set("v", "<leader>y", '"+y')
-vim.keymap.set("n", "<leader>Y", '"+Y')
+vim.keymap.set("n", "<leader>y", '"*y', { noremap = true, silent = true, desc = "Copy to system clipboard" })
+vim.keymap.set("v", "<leader>y", '"*y', { noremap = true, silent = true, desc = "Copy to system clipboard" })
+vim.keymap.set("n", "<leader>Y", '"*Y', { noremap = true, silent = true, desc = "Copy to system clipboard" })
 
 -- I am too used to Ctrl-C, so just in case mapping
 vim.keymap.set("i", "<C-c>", "<Esc>")

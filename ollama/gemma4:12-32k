@@ -1,0 +1,4 @@
+FROM gemma4:12b
+
+PARAMETER top_p 0.98
+PARAMETER num_ctx 32784

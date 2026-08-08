@@ -1,0 +1,4 @@
+FROM sorc/qwen3.5-claude-4.6-opus-q4:9b
+
+PARAMETER top_p 0.98
+PARAMETER num_ctx 32784
